@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robert Zemeckis – 3D Face</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f0f0f;
+      color: #eee;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 14px 20px;
+      background: #1a1a1a;
+      border-bottom: 1px solid #333;
+    }
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    p {
+      color: #888;
+      font-size: 0.85rem;
+    }
+    model-viewer {
+      width: 100%;
+      flex: 1;
+      background: radial-gradient(circle at 50% 40%, #2a2a2a 0%, #0f0f0f 70%);
+    }
+    .footer {
+      padding: 10px 20px;
+      background: #1a1a1a;
+      border-top: 1px solid #333;
+      font-size: 0.8rem;
+      color: #777;
+    }
+    code {
+      background: #333;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Robert Zemeckis – 3D Face</h1>
+    <p>Drag to rotate · Scroll to zoom · Right-click + drag to pan</p>
+  </header>
+
+  <model-viewer
+    src="./zemeckis_face.glb"
+    alt="3D model of Robert Zemeckis"
+    camera-controls
+    touch-action="pan-y"
+    auto-rotate
+    shadow-intensity="1"
+    environment-image="neutral"
+    exposure="1.0"
+  >
+    <div slot="poster" style="color:#666; text-align:center; padding-top: 35vh; line-height: 1.7;">
+      <div style="font-size: 1.1rem; margin-bottom: 8px;">Loading model…</div>
+      <div style="font-size: 0.9rem;">
+        Make sure <code>zemeckis_face.glb</code> is in this same folder<br>
+        then refresh the page
+      </div>
+    </div>
+  </model-viewer>
+
+  <div class="footer">
+    Place <code>zemeckis_face.glb</code> next to this <code>index.html</code> file
+  </div>
+
+</body>
+</html>
